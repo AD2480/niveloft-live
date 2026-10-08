@@ -1,0 +1,18 @@
+{
+  "name": "niveloft",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Niveloft repository entry point for GitHub and Vercel",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "postinstall": "npm ci --prefix frontend --include=dev",
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend",
+    "typecheck": "npm run typecheck --prefix frontend",
+    "test": "npm test --prefix frontend",
+    "lint": "npm run lint --prefix frontend"
+  }
+}
