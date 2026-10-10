@@ -43,3 +43,10 @@ backend/data/
 !frontend/.env.development
 *.pem
 *.key
+
+# Local ML training environments and raw datasets
+.venv-jira/
+ml/**/data/
+ml/**/*.zip
+ml/**/*.csv
+__pycache__/

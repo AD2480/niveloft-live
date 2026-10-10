@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "apache-jira-quantile-v1",
+  "source": "https://www.kaggle.com/datasets/tedlozzo/apaches-jira-issues",
+  "license": "Apache-2.0 (Kaggle publisher metadata)",
+  "archiveSha256": "4eac071f770226d6b81f76a703a861c4bfb75853901db3b4c5b93aefe9f2a713",
+  "target": "creation-to-resolution calendar days, resolved Task/Sub-task issues only",
+  "method": "Gradient boosting quantile regression; log1p duration; initial priority and creation month",
+  "cutoff": "2021-07-16T22:45:46.800000+00:00",
+  "trainingRows": 111252,
+  "testRows": 27324,
+  "testEraRows": 32978,
+  "testEraWithoutValidOutcome": 5654,
+  "maeDays": 49.853,
+  "baselineMaeDays": 49.892,
+  "coverage80": 0.8849,
+  "beatsBaseline": true,
+  "support": {
+    "LOW": 17439,
+    "MEDIUM": 88586,
+    "HIGH": 2834,
+    "URGENT": 2393
+  },
+  "cells": {
+    "LOW:1": {
+      "p10": 0.024,
+      "p50": 7.713,
+      "p90": 450.724
+    },
+    "LOW:2": {
+      "p10": 0.032,
+      "p50": 10.303,
+      "p90": 467.255
+    },
+    "LOW:3": {
+      "p10": 0.025,
+      "p50": 9.727,
+      "p90": 437.377
+    },
+    "LOW:4": {
+      "p10": 0.025,
+      "p50": 9.113,
+      "p90": 384.236
+    },
+    "LOW:5": {
+      "p10": 0.023,
+      "p50": 10.031,
+      "p90": 416.728
+    },
+    "LOW:6": {
+      "p10": 0.021,
+      "p50": 9.921,
+      "p90": 382.887
+    },
+    "LOW:7": {
+      "p10": 0.025,
+      "p50": 10.259,
+      "p90": 394.343
+    },
+    "LOW:8": {
+      "p10": 0.032,
+      "p50": 10.283,
+      "p90": 394.343
+    },
+    "LOW:9": {
+      "p10": 0.025,
+      "p50": 10.283,
+      "p90": 384.201
+    },
+    "LOW:10": {
+      "p10": 0.025,
+      "p50": 9.802,
+      "p90": 384.201
+    },
+    "LOW:11": {
+      "p10": 0.034,
+      "p50": 5.81,
+      "p90": 412.548
+    },
+    "LOW:12": {
+      "p10": 0.012,
+      "p50": 5.872,
+      "p90": 353.694
+    },
+    "MEDIUM:1": {
+      "p10": 0.07,
+      "p50": 12.117,
+      "p90": 322.653
+    },
+    "MEDIUM:2": {
+      "p10": 0.078,
+      "p50": 12.23,
+      "p90": 329.858
+    },
+    "MEDIUM:3": {
+      "p10": 0.07,
+      "p50": 11.419,
+      "p90": 311.392
+    },
+    "MEDIUM:4": {
+      "p10": 0.071,
+      "p50": 10.709,
+      "p90": 254.771
+    },
+    "MEDIUM:5": {
+      "p10": 0.071,
+      "p50": 11.771,
+      "p90": 276.344
+    },
+    "MEDIUM:6": {
+      "p10": 0.075,
+      "p50": 12.392,
+      "p90": 285.487
+    },
+    "MEDIUM:7": {
+      "p10": 0.079,
+      "p50": 13.03,
+      "p90": 308.899
+    },
+    "MEDIUM:8": {
+      "p10": 0.066,
+      "p50": 12.921,
+      "p90": 308.899
+    },
+    "MEDIUM:9": {
+      "p10": 0.048,
+      "p50": 12.921,
+      "p90": 300.95
+    },
+    "MEDIUM:10": {
+      "p10": 0.048,
+      "p50": 12.327,
+      "p90": 300.95
+    },
+    "MEDIUM:11": {
+      "p10": 0.057,
+      "p50": 12.869,
+      "p90": 299.062
+    },
+    "MEDIUM:12": {
+      "p10": 0.045,
+      "p50": 12.996,
+      "p90": 278.333
+    },
+    "HIGH:1": {
+      "p10": 0.055,
+      "p50": 6.512,
+      "p90": 242.816
+    },
+    "HIGH:2": {
+      "p10": 0.063,
+      "p50": 6.577,
+      "p90": 248.244
+    },
+    "HIGH:3": {
+      "p10": 0.055,
+      "p50": 7.515,
+      "p90": 252.319
+    },
+    "HIGH:4": {
+      "p10": 0.055,
+      "p50": 7.421,
+      "p90": 218.457
+    },
+    "HIGH:5": {
+      "p10": 0.055,
+      "p50": 8.186,
+      "p90": 236.967
+    },
+    "HIGH:6": {
+      "p10": 0.059,
+      "p50": 9.109,
+      "p90": 244.812
+    },
+    "HIGH:7": {
+      "p10": 0.063,
+      "p50": 11.364,
+      "p90": 264.901
+    },
+    "HIGH:8": {
+      "p10": 0.05,
+      "p50": 11.268,
+      "p90": 264.901
+    },
+    "HIGH:9": {
+      "p10": 0.042,
+      "p50": 11.268,
+      "p90": 309.438
+    },
+    "HIGH:10": {
+      "p10": 0.042,
+      "p50": 10.786,
+      "p90": 309.438
+    },
+    "HIGH:11": {
+      "p10": 0.051,
+      "p50": 11.265,
+      "p90": 456.472
+    },
+    "HIGH:12": {
+      "p10": 0.031,
+      "p50": 11.377,
+      "p90": 431.773
+    },
+    "URGENT:1": {
+      "p10": 0.108,
+      "p50": 7.595,
+      "p90": 147.514
+    },
+    "URGENT:2": {
+      "p10": 0.132,
+      "p50": 7.669,
+      "p90": 149.594
+    },
+    "URGENT:3": {
+      "p10": 0.115,
+      "p50": 8.782,
+      "p90": 155.179
+    },
+    "URGENT:4": {
+      "p10": 0.116,
+      "p50": 8.251,
+      "p90": 169.804
+    },
+    "URGENT:5": {
+      "p10": 0.116,
+      "p50": 8.987,
+      "p90": 184.21
+    },
+    "URGENT:6": {
+      "p10": 0.165,
+      "p50": 9.996,
+      "p90": 190.316
+    },
+    "URGENT:7": {
+      "p10": 0.169,
+      "p50": 16.014,
+      "p90": 233.19
+    },
+    "URGENT:8": {
+      "p10": 0.15,
+      "p50": 15.882,
+      "p90": 233.19
+    },
+    "URGENT:9": {
+      "p10": 0.142,
+      "p50": 15.882,
+      "p90": 330.227
+    },
+    "URGENT:10": {
+      "p10": 0.142,
+      "p50": 15.24,
+      "p90": 330.227
+    },
+    "URGENT:11": {
+      "p10": 0.142,
+      "p50": 16.214,
+      "p90": 1190.735
+    },
+    "URGENT:12": {
+      "p10": 0.117,
+      "p50": 10.356,
+      "p90": 624.086
+    }
+  },
+  "limitations": [
+    "Resolved-only data excludes unresolved issues; this may bias durations downward.",
+    "Apache open-source work is not validated on Niveloft teams.",
+    "Resolution includes waiting, closure without implementation, and review; it is not working effort.",
+    "Niveloft current priority is compared with Apache initial priority; changed priorities reduce comparability.",
+    "Ranges describe total lifetime from creation, not remaining time for an already-open task.",
+    "This is an external reference only; never use it to replace the project forecast or rank people."
+  ]
+}
