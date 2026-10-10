@@ -1,3 +1,4 @@
+import { ApacheReferenceCard } from '@/features/predictions/ApacheReferenceCard';
 import { CalendarClock, Gauge, LineChart, ListTodo, Target } from 'lucide-react';
 import { lazy, Suspense, useMemo, useState, type ReactNode } from 'react';
 import { Link } from 'react-router';
@@ -142,6 +143,8 @@ export function PredictionPage() {
           </div>
         </div>
       </div>
+
+      <ApacheReferenceCard tasks={tasks.currentData ?? []} />
 
       {noHistory && (
         <p className="rounded-lg border border-warning/30 bg-warning-soft px-4 py-2.5 text-[13px] text-warning" role="status">

@@ -189,6 +189,7 @@ export function DeliveryForecastCard({ project, data: given, className }: { proj
       <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
         <h2 className="text-[16px] font-semibold text-ink">Delivery forecast</h2>
         <Freshness data={data} />
+        <Link to={`/projects/${project.id}/predictions`} className="text-xs text-accent hover:underline">Compare with Apache JIRA research data</Link>
       </div>
       <div className="mt-4 grid gap-5 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
         <div>

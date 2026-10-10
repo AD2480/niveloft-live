@@ -1,3 +1,4 @@
+import { apacheSummary, isApacheReferenceQuestion } from '@/lib/apacheJira';
 import * as RD from '@radix-ui/react-dialog';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { ArrowUp, CalendarClock, Info, ListTree, Mic, MoreHorizontal, PanelRight, PanelRightClose, RotateCcw, Snowflake, Sparkles, Square, TrafficCone, Volume2, X } from 'lucide-react';
@@ -307,6 +308,14 @@ function AssistantBody({ canPin }: { canPin: boolean }) {
       reply({ kind: 'info', tone: 'error', text: `I couldn’t load the tasks of ${p?.name ?? 'this project'}, so I can’t work that out. Try again in a moment.` });
       return false;
     };
+
+    // Answer external benchmark requests deterministically in every AI mode.
+    // This shares the UI's exact values and does not send workspace data to Kaggle.
+    if (isApacheReferenceQuestion(question)) {
+      if (!p) return noProject();
+      if (!needTasks()) return;
+      return reply({ kind: 'info', text: apacheSummary(tasks ?? [], question) });
+    }
 
     switch (intent.kind) {
       case 'plan': {
